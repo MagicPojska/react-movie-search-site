@@ -1,4 +1,4 @@
-import Api from "/home/mrrobot/Documents/react-movie-search-site/src/api/Api";
+import Api from "../api/Api";
 import axios from "axios";
 
 function Form({ setSearchTerm, setMovies, searchTerm }) {
