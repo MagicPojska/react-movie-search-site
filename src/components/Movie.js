@@ -17,6 +17,10 @@ function Movie({ title, poster_path, overview, vote_average }) {
         <h3>{title}</h3>
         <span className={getColor(vote_average)}>{vote_average}</span>
       </div>
+      <div className="overview">
+                <h3>Overview</h3>
+                {overview}
+        </div>
     </div>
   );
 }
