@@ -10,6 +10,7 @@ function Movie({ title, poster_path, overview, vote_average }) {
       return "red";
     }
   };
+  
   return (
     <div className="movie">
       <img src={IMG_URL + poster_path} alt={title} />
