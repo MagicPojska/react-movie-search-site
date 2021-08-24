@@ -4,4 +4,11 @@ const POPULAR_URL =
   BASE_URL + "/discover/movie?sort_by=popularity.desc&" + API_KEY;
 const searchURL = BASE_URL + "/search/movie?" + API_KEY;
 
-export default { API_KEY, BASE_URL, POPULAR_URL, searchURL };
+const object = {
+  API_KEY,
+  BASE_URL,
+  POPULAR_URL,
+  searchURL,
+};
+
+export default object;

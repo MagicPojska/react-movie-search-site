@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Catalogue from "./components/Catalogue";
 import Form from "./components/Form";
-import Api from "./api/Api";
+import object from "./api/Api";
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -13,7 +13,7 @@ function App() {
   }, []);
 
   async function fetchData() {
-    const moviesP = await axios(Api.POPULAR_URL);
+    const moviesP = await axios(object.POPULAR_URL);
     setMovies(moviesP.data.results);
   }
 

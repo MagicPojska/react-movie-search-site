@@ -1,10 +1,10 @@
-import Api from "../api/Api";
+import object from "../api/Api";
 import axios from "axios";
 
 function Form({ setSearchTerm, setMovies, searchTerm }) {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-    const search = Api.searchURL + "&query=" + searchTerm;
+    const search = object.searchURL + "&query=" + searchTerm;
     const moviesSearch = await axios(search);
     setMovies(moviesSearch.data.results);
   };
