@@ -1,12 +1,17 @@
 import object from "../api/Api";
 import axios from "axios";
 
-function Form({ setSearchTerm, setMovies, searchTerm }) {
+function Form({ setSearchTerm, setMovies, searchTerm, useEffect, fetchData }) {
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     const search = object.searchURL + "&query=" + searchTerm;
-    const moviesSearch = await axios(search);
-    setMovies(moviesSearch.data.results);
+    if (searchTerm) {
+      const moviesSearch = await axios(search);
+      setMovies(moviesSearch.data.results);
+    } else {
+      fetchData();
+    }
+    e.target.reset();
   };
 
   const handleOnChange = (e) => {
