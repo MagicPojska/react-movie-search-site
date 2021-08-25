@@ -23,7 +23,6 @@ function App() {
         setSearchTerm={setSearchTerm}
         setMovies={setMovies}
         searchTerm={searchTerm}
-        useEffect={useEffect}
         fetchData={fetchData}
       />
       <Catalogue movies={movies} />
